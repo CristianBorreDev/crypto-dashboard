@@ -24,8 +24,11 @@ interface CryptoState {
   tickCooldown: () => void;
 }
 
-// URL de tu backend proxy
-const API = "http://localhost:5000/api/coingecko";
+// URL de tu backend proxy local
+// const API = "http://localhost:5000/api/coingecko";
+
+// URL de tu api prod
+const API = "/api/server"
 
 export const useCryptoStore = create<CryptoState>()(
   persist(
