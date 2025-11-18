@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# 💹 crypto-dashboard · Laboratorio de Visualización
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> “El mercado se mueve, el ritmo permanece.”  
+> — Cristian / Zentrix  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌌 Descripción  
 
-## React Compiler
+**crypto-dashboard** es un módulo experimental dentro del ecosistema **Cristian / Zentrix**, diseñado para **visualizar datos de criptomonedas en tiempo real** a través de una **interfaz interactiva, analítica y coherente visualmente**.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Cada moneda se convierte en un **espacio de exploración visual**, mostrando su precio, variación y datos históricos en gráficos intuitivos.  
+El usuario puede **seleccionar, filtrar y marcar monedas como favoritas**, generando un panel personalizado que se guarda automáticamente en su dispositivo.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Stack y Librerías  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Capa | Herramienta |
+|------|--------------|
+| Framework | React + TypeScript |
+| Estilos | TailwindCSS + Variables temáticas |
+| Estado | Zustand (con persistencia en LocalStorage) |
+| Animaciones | Framer Motion |
+| Gráficos | Recharts |
+| Datos | CoinGecko API |
+| Despliegue | Vercel |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔄 Filosofía de interacción  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> “Observar el mercado es entender su ritmo y flujo.”  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**crypto-dashboard** no solo presenta números, sino **una experiencia visual clara y responsiva**.  
+Cada interacción, transición y gráfico está diseñado para expresar **claridad en el movimiento y control del usuario**, manteniendo la estética central de Zentrix.  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🧩 Funcionalidades  
+
+- 🔍 **Buscar criptomonedas:** filtrar por nombre o símbolo.  
+- ⭐ **Favoritos dinámicos:** marcar y almacenar monedas para seguimiento rápido.  
+- 📊 **Panel gráfico histórico:** mostrar precios y tendencias con intervalos diarios.  
+- 🖥️ **Selección de moneda:** al elegir una moneda, su gráfico se actualiza automáticamente.  
+- 📈 **Visualización en tiempo real:** consultar datos de CoinGecko mediante un backend proxy para evitar CORS.  
+- 🌙 **Modo oscuro total:** coherente con la estética del ecosistema Zentrix.  
+- 📱 **Responsive / Mobile-first:** experiencia optimizada para móviles y escritorio.  
+
+---
+
+## 🧭 Propósito  
+
+Este módulo representa una **exploración visual y funcional de datos de mercado**, donde la información pública se transforma en **interacción y experiencia visual**.  
+Es un paso hacia **dashboards de análisis financiero con propósito y ritmo**, combinando front-end y APIs de manera efectiva.  
+
+---
+
+## 🌍 API utilizada  
+
+**[CoinGecko API](https://www.coingecko.com/en/api)**  
+API pública para obtener información de criptomonedas global.  
+
+---
+
+## 🌌 Autor
+
+**Cristian Borré**  
+Diseñador y desarrollador de experiencias digitales.  
+
+📩 [crstnborre@gmail.com](mailto:crstnborre@gmail.com)  
+🌐 [cristian-dev.vercel.app](https://cristian-dev.vercel.app)  
+
+---
+
+© 2025 **Cristian** — *Cada dato fluye hacia el futuro.*
