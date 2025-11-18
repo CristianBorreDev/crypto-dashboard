@@ -153,7 +153,7 @@ export const useCryptoStore = create<CryptoState>()(
         set({ selectedCoin: coin });
         get()
           .fetchHistorical(coin.id)
-          .catch((err) => {});
+          .catch((err) => { set({ error: String(err), loading: false }); });
       },
     }),
     {
